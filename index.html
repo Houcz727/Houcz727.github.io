@@ -1,393 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <meta name="theme-color" content="#f8faf8" />
-  <meta name="description" content="Academic homepage of Chengzhi Hou, PhD candidate at Nanjing University. Research in near-surface wind climatology, wind energy assessment, and aeolian processes." />
-  <meta name="author" content="Chengzhi Hou" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Chengzhi Hou | Wind Climatology Research" />
-  <meta property="og:description" content="Near-surface wind climatology · Wind energy assessment · Aeolian processes | Nanjing University" />
-  <title>Chengzhi Hou — Wind Climatology Research</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <style>
-    :root {
-      --ink: #102c35;
-      --ink-deep: #0b222b;
-      --ink-secondary: #526a70;
-      --paper: #f8faf8;
-      --white: #ffffff;
-      --mist: #ecf2ef;
-      --line: #dce6e2;
-      --teal: #267a75;
-      --teal-bright: #60c5b7;
-      --mint: #d3eae1;
-      --sand: #be9073;
-      --serif: Georgia, 'Times New Roman', serif;
-      --sans: 'Aptos', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      --content: 1160px;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.62; -webkit-font-smoothing: antialiased; }
-    ::selection { background: #c9e7de; color: var(--ink); }
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; border-radius: 3px; }
-    button:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
-    .container { width: min(var(--content), calc(100% - 92px)); margin-inline: auto; }
-    .skip-link { position: absolute; top: -90px; left: 24px; z-index: 20; background: #fff; color: var(--ink); padding: 8px 14px; border-radius: 4px; }
-    .skip-link:focus { top: 15px; }
-    .site-header { position: sticky; z-index: 15; top: 0; border-bottom: 1px solid rgba(192, 210, 205, .70); background: rgba(248, 250, 248, .93); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
-    .header-inner { height: 87px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-    .brand { display: inline-flex; align-items: center; gap: 13px; min-width: 0; }
-    .brand-mark { width: 41px; height: 41px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font: 500 15px var(--serif); letter-spacing: -.06em; }
-    .brand-name { font-size: 14px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
-    .brand-name span { display: block; color: var(--ink-secondary); font-size: 11px; font-weight: 500; letter-spacing: .095em; text-transform: uppercase; margin-top: -2px; }
-    .nav { display: flex; align-items: center; gap: clamp(15px, 2.4vw, 34px); }
-    .nav a { font-size: 13px; color: #455f65; font-weight: 600; transition: color .2s; }
-    .nav a:hover, .text-link:hover { color: var(--teal); }
-    .nav .nav-orcid { border: 1px solid #9bb7af; padding: 9px 14px; border-radius: 4px; color: var(--ink); background: #f5faf7; }
-    .nav .nav-orcid:hover { background: var(--mint); }
-    .hero { padding: 75px 0 82px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(380px, .93fr); gap: 5%; align-items: center; }
-    .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 800; letter-spacing: .21em; text-transform: uppercase; color: var(--teal); }
-    .eyebrow:before { display: block; content: ''; width: 28px; height: 2px; background: var(--sand); }
-    h1,h2,h3,p { margin-top: 0; }
-    h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.061em; font-size: clamp(64px, 7.5vw, 103px); line-height: 1.00; margin: 28px 0 18px; }
-    .hero h1 span { color: var(--teal); }
-    .hero-role { font-size: clamp(19px, 2vw, 25px); font-weight: 500; color: var(--ink); margin: 0 0 17px; }
-    .hero-institution { display: flex; align-items: center; color: #526a70; gap: 9px; font-size: 14px; margin-bottom: 29px; }
-    .hero-institution svg { color: var(--teal); flex-shrink: 0; }
-    .hero-lead { max-width: 610px; color: #50666b; line-height: 1.79; font-size: 16px; margin: 0 0 36px; }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 11px; padding: 11px 20px; font-size: 13px; font-weight: 700; letter-spacing: .02em; border-radius: 4px; transition: transform .2s, background .2s, border-color .2s; }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { background: var(--ink); border: 1px solid var(--ink); color: white; }
-    .button-primary:hover { background: var(--teal); border-color: var(--teal); }
-    .button-outline { border: 1px solid #a8bdb7; background: transparent; color: var(--ink); }
-    .button-outline:hover { background: var(--mist); }
-    .button svg, .arrow svg { width: 15px; height: 15px; }
-    .hero-art { min-height: 476px; position: relative; border-radius: 9px; isolation: isolate; background: linear-gradient(150deg, #e2efea 0%, #bfd8d2 46%, #84b7af 100%); box-shadow: 22px 24px 0 rgba(34, 98, 90, .055); overflow: hidden; }
-    .hero-art:after { content: ''; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(10, 65, 69, .06), rgba(13, 66, 69, .20)); pointer-events: none; }
-    .map-grid { position: absolute; inset: 0; background-image: linear-gradient(to right,rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.16) 1px,transparent 1px); background-size: 70px 70px; }
-    .hero-art svg { position: absolute; z-index: 1; width: 120%; height: 120%; left: -12%; top: -9%; }
-    .hero-art .orbit-words { position: absolute; z-index: 2; top: 32px; left: 31px; font-size: 10px; font-weight: 750; color: #2e6767; letter-spacing: .18em; text-transform: uppercase; }
-    .hero-art .art-index { position: absolute; z-index: 2; top: 32px; right: 30px; color: rgba(20, 70, 68, .70); font-size: 11px; font-family: var(--serif); }
-    .art-caption { position: absolute; z-index: 3; bottom: 29px; left: 28px; right: 28px; display: flex; justify-content: space-between; align-items: end; gap: 12px; padding: 20px 20px 18px; border: 1px solid rgba(255,255,255,.44); background: rgba(250,255,251,.84); backdrop-filter: blur(8px); border-radius: 5px; }
-    .art-caption span { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: #597770; font-weight: 700; }
-    .art-caption strong { display: block; margin-top: 4px; max-width: 265px; font-size: 21px; font-weight: 500; line-height: 1.33; letter-spacing: -.023em; font-family: var(--serif); }
-    .art-caption em { font-style: normal; font-family: var(--serif); font-size: 22px; color: #68958b; align-self: center; }
-    .subject-line { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); align-items: center; }
-    .subject-line span { color: #567077; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; padding: 17px 25px 17px 0; }
-    .subject-line span + span:before { content: '·'; color: var(--sand); margin-right: 23px; font-size: 16px; }
-    .section { padding: 96px 0; }
-    .section-heading { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 39px; }
-    .kicker { display: block; font-size: 11px; color: var(--teal); font-weight: 800; letter-spacing: .20em; text-transform: uppercase; margin-bottom: 15px; }
-    h2 { font-family: var(--serif); font-size: clamp(33px, 3.8vw, 53px); font-weight: 400; line-height: 1.11; letter-spacing: -.045em; margin-bottom: 0; }
-    .section-aside { max-width: 342px; color: var(--ink-secondary); font-size: 14px; line-height: 1.75; margin-bottom: 0; }
-    .about-grid { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(280px,.88fr); gap: 100px; align-items: start; }
-    .about-copy p { color: #50686d; line-height: 1.91; font-size: 16px; margin-bottom: 18px; }
-    .about-copy strong { color: var(--ink); font-weight: 650; }
-    .education-panel { border-left: 2px solid #8ab5aa; padding: 10px 0 16px 27px; }
-    .small-caps { display: block; margin-bottom: 21px; color: #6a8386; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: 10px; }
-    .education-panel h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; }
-    .education-panel .uni { font-family: var(--serif); font-size: 23px; font-weight: 500; line-height: 1.32; margin-bottom: 7px; }
-    .education-panel p { font-size: 14px; line-height: 1.6; color: var(--ink-secondary); margin-bottom: 14px; }
-    .education-panel a { display: inline-flex; gap: 5px; color: var(--teal); font-size: 13px; font-weight: 700; border-bottom: 1px solid rgba(38, 122, 117, .4); padding-bottom: 2px; }
-    .research-section { background: #eef4f1; border-top: 1px solid #e1e9e4; border-bottom: 1px solid #e1e9e4; }
-    .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-    .research-card { position: relative; min-height: 320px; padding: 32px 27px 25px; border: 1px solid #dbe5e0; background: #fff; border-radius: 5px; display: flex; flex-direction: column; }
-    .research-card .card-num { font-family: var(--serif); font-size: 21px; color: #9bb2aa; }
-    .topic-icon { position: absolute; right: 25px; top: 32px; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #eef6f1; color: var(--teal); }
-    .topic-icon svg { width: 25px; height: 25px; }
-    .research-card h3 { font-family: var(--serif); font-weight: 500; font-size: 25px; line-height: 1.20; letter-spacing: -.03em; margin-top: 48px; margin-bottom: 14px; }
-    .research-card p { color: #62777b; font-size: 14px; line-height: 1.8; margin-bottom: 26px; }
-    .research-card .card-bottom { margin-top: auto; padding-top: 17px; border-top: 1px solid #e3ebe6; color: var(--teal); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; font-weight: 800; }
-    .publications-section { background: var(--ink-deep); color: #f7fbf8; }
-    .publications-section .kicker { color: #7fd0c1; }
-    .publications-section .section-aside { color: #a7b8b9; }
-    .publication-list { border-top: 1px solid rgba(221, 242, 237, .17); }
-    .publication { display: grid; grid-template-columns: 94px minmax(0,1fr) 44px; column-gap: 24px; padding: 25px 0 28px; border-bottom: 1px solid rgba(221, 242, 237, .17); align-items: start; }
-    .publication-year { color: #8cbab4; font-size: 14px; font-family: var(--serif); padding-top: 6px; }
-    .publication-journal { text-transform: uppercase; color: #88c2b8; font-size: 11px; font-weight: 800; letter-spacing: .15em; margin-bottom: 8px; }
-    .publication h3 { max-width: 800px; font-weight: 500; font-family: var(--serif); font-size: clamp(20px,2.4vw,27px); line-height: 1.36; letter-spacing: -.018em; margin: 0 0 8px; }
-    .publication-meta { color: #95abb0; font-size: 12px; }
-    .publication .pub-arrow { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #58716f; border-radius: 50%; margin-top: 14px; color: #a7d1ca; transition: background .2s, transform .2s; }
-    .publication:hover .pub-arrow { background: var(--teal); color: white; transform: translate(2px,-2px); }
-    .publication .pub-arrow svg { width: 16px; height: 16px; }
-    .publication a.title-link { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color .2s; }
-    .publication a.title-link:hover { text-decoration-color: #96d4c8; }
-    .publication-note { margin-top: 24px; color: #8fa9ac; font-size: 12px; }
-    .methods-section { padding: 85px 0; }
-    .methods-layout { display: grid; grid-template-columns: .95fr 1.05fr; gap: 12%; align-items: start; }
-    .methods-layout h2 { margin-bottom: 20px; }
-    .methods-layout p { color: var(--ink-secondary); line-height: 1.85; font-size: 15px; }
-    .method-tags { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 38px; }
-    .method-tags span { border: 1px solid #cddfda; border-radius: 3px; background: #f7faf8; padding: 10px 14px; font-size: 12px; font-weight: 650; color: #42666b; }
-    .contact-section { background: #e7efeb; padding: 72px 0 82px; }
-    .contact-layout { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 50px; }
-    .contact-layout h2 { margin-bottom: 16px; }
-    .contact-layout p { color: #587177; max-width: 565px; margin: 0; }
-    .contact-links { display: grid; gap: 10px; }
-    .contact-link { display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 1px solid #ccded6; border-radius: 4px; background: #f7faf8; padding: 17px 19px; transition: background .2s; }
-    .contact-link:hover { background: white; }
-    .contact-link strong { display: block; font-size: 13px; }
-    .contact-link small { display: block; font-size: 12px; color: #6f888b; line-height: 1.4; margin-top: 1px; overflow-wrap: anywhere; }
-    .contact-link svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--teal); }
-    .site-footer { padding: 26px 0 28px; background: var(--paper); }
-    .footer-layout { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 13px; color: #71868a; font-size: 12px; }
-    .footer-layout a { color: var(--teal); }
-    .footer-layout a:hover { text-decoration: underline; }
-    @media (max-width: 1020px) {
-      .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 4%; }
-      .hero-art { min-height: 425px; }
-      .hero h1 { font-size: clamp(64px, 8vw, 92px); }
-      .about-grid { gap: 45px; }
-      .research-card { padding: 26px 20px 22px; }
-      .research-card h3 { font-size: 22px; }
-    }
-    @media (max-width: 760px) {
-      .container { width: min(var(--content), calc(100% - 42px)); }
-      .header-inner { height: auto; min-height: 72px; flex-wrap: wrap; padding-top: 13px; padding-bottom: 12px; gap: 13px; }
-      .nav { width: 100%; justify-content: space-between; gap: 14px; }
-      .nav a { font-size: 12px; }
-      .nav .nav-orcid { padding: 5px 9px; }
-      .hero { padding: 44px 0 50px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 45px; }
-      .hero h1 { font-size: clamp(64px, 13vw, 85px); margin-top: 22px; }
-      .hero-art { min-height: 365px; max-width: 650px; box-shadow: 12px 15px 0 rgba(34,98,90,.055); }
-      .section { padding: 68px 0; }
-      .section-heading { align-items: start; flex-direction: column; gap: 14px; }
-      .section-aside { max-width: 600px; }
-      .about-grid, .methods-layout, .contact-layout { grid-template-columns: 1fr; gap: 32px; }
-      .research-grid { grid-template-columns: 1fr; }
-      .research-card { min-height: 235px; }
-      .research-card h3 { margin-top: 22px; font-size: 26px; }
-      .research-card p { max-width: 540px; }
-      .publication { grid-template-columns: 65px minmax(0,1fr) 30px; gap: 12px; }
-      .publication .pub-arrow { width: 29px; height: 29px; }
-      .methods-section { padding: 70px 0; }
-      .method-tags { padding-top: 0; }
-      .contact-section { padding: 66px 0; }
-    }
-    @media (max-width: 430px) {
-      .nav a { font-size: 11px; }
-      .nav { gap: 9px; }
-      .hero-art { min-height: 315px; }
-      .hero-art .orbit-words { left: 20px; top: 20px; font-size: 9px; }
-      .art-caption { bottom: 18px; left: 16px; right: 16px; padding: 14px; }
-      .art-caption strong { font-size: 19px; }
-      .subject-line span { font-size: 10px; padding-right: 13px; }
-      .subject-line span + span:before { margin-right: 12px; }
-      .publication { grid-template-columns: 1fr 30px; }
-      .publication-year { grid-column: 1 / -1; padding-top: 0; }
-      .publication h3 { font-size: 21px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; }
-    }
-    @media print {
-      .site-header { position: static; }
-      .nav, .hero-art, .button, .pub-arrow { display: none !important; }
-      .hero, .section, .methods-section, .contact-section { padding: 35px 0; }
-      .hero-grid, .about-grid, .contact-layout, .methods-layout { display: block; }
-      .publications-section { color: #111; background: white; }
-      .publication h3, .publication-year, .publication-journal, .publication-meta { color: #111; }
-      .research-section, .contact-section { background: white; }
-      .research-grid { display: block; }
-      .research-card { break-inside: avoid; min-height: unset; margin-bottom: 15px; }
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Chengzhi Hou",
-    "description": "PhD candidate researching near-surface wind climatology, wind energy assessment, and aeolian processes.",
-    "affiliation": {"@type":"CollegeOrUniversity", "name":"Nanjing University", "url":"https://www.nju.edu.cn/"},
-    "sameAs": ["https://orcid.org/0000-0002-6966-904X"],
-    "knowsAbout": ["Near-surface wind speed", "Wind climatology", "Climate variability", "Wind energy assessment", "Aeolian transport"]
-  }
-  </script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Chengzhi Hou">
+<meta name="description" content="Academic website of Chengzhi Hou (侯承志), a doctoral researcher at Nanjing University studying wind climatology, wind energy and aeolian processes.">
+<meta property="og:title" content="Home | Chengzhi Hou">
+<meta property="og:description" content="Academic website of Chengzhi Hou (侯承志), a doctoral researcher at Nanjing University studying wind climatology, wind energy and aeolian processes.">
+<meta property="og:type" content="website">
+<title>Home | Chengzhi Hou · 侯承志</title>
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Chengzhi Hou, homepage">
-        <span class="brand-mark" aria-hidden="true">CH</span>
-        <span class="brand-name">Chengzhi Hou<span>Academic profile</span></span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-orcid" href="https://orcid.org/0000-0002-6966-904X" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
-      </nav>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./">Chengzhi Hou <span lang="zh-CN" style="font-family:'Noto Serif SC','Songti SC',serif;font-weight:normal;font-size:.8em;">侯承志</span></a><nav class="nav" aria-label="Main navigation"><a href="./" aria-current="page">Home</a>
+<a href="./curriculum-vitae/">Curriculum Vitae</a>
+<a href="./research/">Research</a>
+<a href="./publications/">Publications</a>
+<a href="./presentations/">Presentations</a></nav></div></header>
+<main id="main">
+<div class="container">
+  <section class="home-hero" aria-labelledby="home-title"><div class="home-hero-inner">
+    <div>
+      <h1 id="home-title" class="name">Chengzhi Hou <span class="cn" lang="zh-CN">(侯承志)</span></h1>
+      <p class="role">Doctoral Researcher · Combined Master’s–Ph.D. Program</p>
+      <p class="institution">School of Geography and Ocean Science, Nanjing University</p>
+      <p class="intro"><span class="lead">Welcome to my academic website.</span> I am a doctoral researcher at Nanjing University, China. My research focuses on the spatial and temporal variability of near-surface winds, with an emphasis on wind climatology, annual cycles, atmospheric circulation and long-term climate variability.</p>
+      <p class="intro">I also investigate how the temporal resolution of wind data affects wind energy resource assessment and aeolian transport estimates. My work combines surface observations, atmospheric reanalysis datasets and climate-model simulations.</p>
+      <p class="hero-note">Graduate studies at Nanjing University since 2021 · Expected Ph.D. completion: December 2027.</p>
+      <div class="link-row"><a href="mailto:chengzhihou@smail.nju.edu.cn">Email ↗</a><a href="./curriculum-vitae/">Curriculum Vitae ↗</a><a href="./publications/">Publications ↗</a><a href="https://scholar.google.com/citations?user=AGvn68sAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://orcid.org/0000-0002-6966-904X" target="_blank" rel="noopener noreferrer">ORCID ↗</a></div>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-heading">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Atmospheric science · Physical geography</div>
-          <h1 id="hero-heading">Chengzhi<br><span>Hou.</span></h1>
-          <p class="hero-role">PhD Candidate · Wind Climatology</p>
-          <div class="hero-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 10h16M6 10v11M10 10v11M14 10v11M18 10v11M2 10l10-7 10 7"/></svg>
-            School of Geography and Ocean Science, Nanjing University
-          </div>
-          <p class="hero-lead">Exploring how near-surface winds vary across space and time—and what these variations mean for wind energy resources and aeolian landscapes.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#research">Explore my research
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-            <a class="button button-outline" href="#publications">View publications
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="hero-art" role="img" aria-label="Abstract illustration of atmospheric wind streamlines and overlapping circulation patterns">
-          <div class="map-grid"></div>
-          <div class="orbit-words">Atmospheric circulation / wind field</div>
-          <div class="art-index">FIG. 01 / WIND</div>
-          <svg viewBox="0 0 600 570" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <linearGradient id="flow" x1="0" y1="0" x2="600" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff" stop-opacity=".12"/><stop offset=".55" stop-color="#f8ffff" stop-opacity=".78"/><stop offset="1" stop-color="#f8ffff" stop-opacity=".13"/></linearGradient>
-            </defs>
-            <circle cx="311" cy="266" r="191" stroke="#e9fffa" stroke-opacity=".29" stroke-width="1" stroke-dasharray="6 9" />
-            <circle cx="311" cy="266" r="147" stroke="#e9fffa" stroke-opacity=".28" stroke-width="1" stroke-dasharray="3 10" />
-            <path d="M-90 175C48 24 120 264 252 184s197-186 367-72" stroke="url(#flow)" stroke-width="2.1"/>
-            <path d="M-81 213C68 78 132 316 270 222S452 55 644 159" stroke="url(#flow)" stroke-width="1.8"/>
-            <path d="M-96 256C50 131 153 366 291 256S472 96 652 205" stroke="url(#flow)" stroke-width="2"/>
-            <path d="M-94 306C91 160 163 421 305 294S494 146 679 247" stroke="url(#flow)" stroke-width="1.6"/>
-            <path d="M-90 348C84 225 186 472 324 337S498 205 662 287" stroke="url(#flow)" stroke-width="2.1"/>
-            <path d="M-85 389C90 283 206 503 340 384S521 244 669 326" stroke="url(#flow)" stroke-width="1.6"/>
-            <path d="M-91 434C88 342 228 540 353 422S526 297 662 369" stroke="url(#flow)" stroke-width="1.8"/>
-            <path d="M-83 472C104 408 233 576 383 464S543 349 675 418" stroke="url(#flow)" stroke-width="1.4"/>
-            <path d="M-65 127C84 -26 154 220 240 152S404 13 608 62" stroke="url(#flow)" stroke-width="1.2"/>
-            <path d="M-42 505C180 469 265 593 407 514S566 415 689 465" stroke="url(#flow)" stroke-width="1.2"/>
-            <path d="M312 54V474M96 264H514" stroke="#f8fffd" stroke-opacity=".18" stroke-width="1" />
-            <circle cx="312" cy="264" r="5" fill="#ffffff" fill-opacity=".76" />
-            <circle cx="312" cy="264" r="13" stroke="#ffffff" stroke-opacity=".42" stroke-width="1" />
-            <path d="M403 104l10-9m-10 9 13 1m-13-1 1-13" stroke="#fff" stroke-opacity=".69" stroke-width="1.3" />
-          </svg>
-          <div class="art-caption"><div><span>Research focus</span><strong>Wind climate<br>across timescales</strong></div><em aria-hidden="true">↗</em></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container" aria-label="Research areas"><div class="subject-line"><span>Wind climatology</span><span>Wind energy</span><span>Aeolian processes</span></div></div>
-
-    <section id="about" class="section" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="section-heading"><div><span class="kicker">01 / Profile</span><h2 id="about-heading">About me</h2></div></div>
-        <div class="about-grid">
-          <div class="about-copy">
-            <p>I am a PhD candidate at the <strong>School of Geography and Ocean Science, Nanjing University</strong>, China. My research focuses on near-surface wind climatology and its applications to wind energy assessment and aeolian processes.</p>
-            <p>I investigate the spatial and temporal variability of near-surface winds across multiple timescales, the evaluation of atmospheric reanalysis datasets, and the effects of temporal resolution on wind power density and aeolian transport estimates.</p>
-            <p>My work draws on surface meteorological observations, atmospheric reanalysis products, and climate model simulations to examine wind-climate patterns and their environmental implications.</p>
-          </div>
-          <aside class="education-panel" aria-label="Academic affiliation">
-            <span class="small-caps">Current affiliation</span>
-            <h3>PhD Candidate</h3>
-            <div class="uni">Nanjing University</div>
-            <p>School of Geography and Ocean Science<br>Nanjing, China</p>
-            <a href="https://sgos-e.nju.edu.cn/" target="_blank" rel="noopener noreferrer">Official school website <span aria-hidden="true">↗</span></a>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="research" class="section research-section" aria-labelledby="research-heading">
-      <div class="container">
-        <div class="section-heading">
-          <div><span class="kicker">02 / Research</span><h2 id="research-heading">Research interests</h2></div>
-          <p class="section-aside">Understanding wind-climate variability, and connecting atmospheric processes with practical environmental applications.</p>
-        </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="card-num">01</span>
-            <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8c4-5 8 5 12 0s5-2 6-1M3 13c4-5 8 5 12 0s5-2 6-1M3 18c4-5 8 5 12 0s5-2 6-1"/></svg></span>
-            <h3>Wind climatology</h3>
-            <p>Large-scale patterns, annual cycles, long-term changes, and climate variability in near-surface wind speed.</p>
-            <span class="card-bottom">Climate variability · Circulation</span>
-          </article>
-          <article class="research-card">
-            <span class="card-num">02</span>
-            <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3v18M12 10l7-3M12 10l-6-6M12 10l-5 8"/><circle cx="12" cy="10" r="1.3"/></svg></span>
-            <h3>Wind energy assessment</h3>
-            <p>Wind resource estimation, wind power density, and the consequences of temporal averaging for resource assessments.</p>
-            <span class="card-bottom">Wind resources · Temporal resolution</span>
-          </article>
-          <article class="research-card">
-            <span class="card-num">03</span>
-            <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 19c4-7 8-7 11-4 3-5 6-7 9-9M2 21h20M5 11c2-2 4-2 6-1M14 7c2 0 3 1 5 1"/></svg></span>
-            <h3>Aeolian processes</h3>
-            <p>Wind-driven sediment transport, dune dynamics, and the sensitivity of aeolian indicators to wind-data resolution.</p>
-            <span class="card-bottom">Sediment transport · Dune dynamics</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="section publications-section" aria-labelledby="publications-heading">
-      <div class="container">
-        <div class="section-heading">
-          <div><span class="kicker">03 / Publications</span><h2 id="publications-heading">Selected publications</h2></div>
-          <p class="section-aside">Peer-reviewed research in wind-energy assessment, wind-driven geomorphic change, climate extremes, and reanalysis evaluation.</p>
-        </div>
-        <div class="publication-list">
-          <article class="publication">
-            <span class="publication-year">2025</span>
-            <div><div class="publication-journal">Nature Communications</div><h3><a class="title-link" href="https://doi.org/10.1038/s41467-025-59195-2" target="_blank" rel="noopener noreferrer">Detecting and calibrating large biases in global onshore wind power assessment across temporal scales</a></h3><div class="publication-meta">DOI: 10.1038/s41467-025-59195-2</div></div>
-            <a class="pub-arrow" href="https://doi.org/10.1038/s41467-025-59195-2" target="_blank" rel="noopener noreferrer" aria-label="Open publication in Nature Communications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          </article>
-          <article class="publication">
-            <span class="publication-year">2025</span>
-            <div><div class="publication-journal">Geophysical Research Letters</div><h3><a class="title-link" href="https://doi.org/10.1029/2024GL113506" target="_blank" rel="noopener noreferrer">Slowdown of Dune Migration in East Asia's Inland Deserts: A 35-Year Response to Wind Stilling</a></h3><div class="publication-meta">DOI: 10.1029/2024GL113506</div></div>
-            <a class="pub-arrow" href="https://doi.org/10.1029/2024GL113506" target="_blank" rel="noopener noreferrer" aria-label="Open publication in Geophysical Research Letters"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          </article>
-          <article class="publication">
-            <span class="publication-year">2023</span>
-            <div><div class="publication-journal">Theoretical and Applied Climatology</div><h3><a class="title-link" href="https://doi.org/10.1007/s00704-022-04306-y" target="_blank" rel="noopener noreferrer">Evaluation of ERA5 reanalysis over the deserts in northern China</a></h3><div class="publication-meta">DOI: 10.1007/s00704-022-04306-y</div></div>
-            <a class="pub-arrow" href="https://doi.org/10.1007/s00704-022-04306-y" target="_blank" rel="noopener noreferrer" aria-label="Open publication in Theoretical and Applied Climatology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          </article>
-          <article class="publication">
-            <span class="publication-year">2023</span>
-            <div><div class="publication-journal">Scientia Geographica Sinica</div><h3><a class="title-link" href="https://doi.org/10.13249/j.cnki.sgs.2023.08.018" target="_blank" rel="noopener noreferrer">Spatiotemporal variations of climate extremes and influential factors in deserts and sandy fields of northern China from 1961 to 2019</a></h3><div class="publication-meta">DOI: 10.13249/j.cnki.sgs.2023.08.018</div></div>
-            <a class="pub-arrow" href="https://doi.org/10.13249/j.cnki.sgs.2023.08.018" target="_blank" rel="noopener noreferrer" aria-label="Open publication in Scientia Geographica Sinica"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          </article>
-        </div>
-        <p class="publication-note">Publication details are based on my public ORCID record. For a current overview of publications and citations, see <a class="text-link" href="https://orcid.org/0000-0002-6966-904X" target="_blank" rel="noopener noreferrer">ORCID</a> and <a class="text-link" href="https://scholar.google.com/citations?user=AGvn68sAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
-      </div>
-    </section>
-
-    <section class="methods-section" aria-labelledby="methods-heading">
-      <div class="container methods-layout">
-        <div><span class="kicker">04 / Approach</span><h2 id="methods-heading">Data &amp; methods</h2><p>My work combines observational evidence and large-scale climate datasets to study near-surface wind variability and related applications.</p></div>
-        <div class="method-tags" aria-label="Methods and research tools"><span>Surface meteorological observations</span><span>ERA5 &amp; reanalysis datasets</span><span>Climate model simulations</span><span>Temporal-scale analysis</span><span>Climate variability diagnostics</span><span>Wind resource assessment</span></div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container contact-layout">
-        <div><span class="kicker">05 / Contact</span><h2 id="contact-heading">Get in touch</h2><p>For research correspondence, academic collaboration, or questions about my published work, please feel free to get in touch.</p></div>
-        <div class="contact-links">
-          <a class="contact-link" href="mailto:chengzhihou@smail.nju.edu.cn"><span><strong>Institutional email</strong><small>chengzhihou@smail.nju.edu.cn</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
-          <a class="contact-link" href="mailto:houchengzhi312@163.com"><span><strong>Email</strong><small>houchengzhi312@163.com</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
-          <a class="contact-link" href="https://orcid.org/0000-0002-6966-904X" target="_blank" rel="noopener noreferrer"><span><strong>ORCID profile</strong><small>0000-0002-6966-904X</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          <a class="contact-link" href="https://scholar.google.com/citations?user=AGvn68sAAAAJ" target="_blank" rel="noopener noreferrer"><span><strong>Google Scholar</strong><small>Chengzhi Hou · publications &amp; citations</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          <a class="contact-link" href="https://www.scopus.com/authid/detail.uri?authorId=57992245100" target="_blank" rel="noopener noreferrer"><span><strong>Scopus author profile</strong><small>Author ID: 57992245100</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-          <a class="contact-link" href="https://sgos-e.nju.edu.cn/" target="_blank" rel="noopener noreferrer"><span><strong>Academic affiliation</strong><small>School of Geography and Ocean Science · NJU</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container footer-layout"><span>© 2026 Chengzhi Hou · Personal academic website</span><span>Nanjing University, China · <a href="#top">Back to top ↑</a></span></div></footer>
-</body>
-</html>
+    <figure class="portrait-wrap"><img class="portrait" src="./assets/chengzhi-hou.jpg" alt="Portrait provided by Chengzhi Hou" width="480" height="640"><figcaption class="portrait-caption">Chengzhi Hou</figcaption></figure>
+  </div></section>
+  <div class="separator"></div>
+  <section class="home-section"><h2 class="section-title">Research Interests</h2>
+    <ul class="small-list"><li>Near-surface wind climatology and climate variability</li><li>Wind energy assessment and temporal-resolution effects</li><li>Aeolian transport, wind erosion and dune dynamics</li></ul>
+    <p><a href="./research/">Explore my research →</a></p>
+  </section>
+  <div class="separator"></div>
+  <section class="home-section"><h2 class="section-title">Recent Highlights</h2>
+    <ul class="small-list"><li><strong>2025</strong> — Awarded the NSFC Young Student Basic Research Project (Doctoral Researchers; Grant No. 425B2001) as Principal Investigator.</li><li><strong>2025</strong> — Research published in <em>Nature Communications</em> and <em>Geophysical Research Letters</em>.</li><li><strong>2025</strong> — Poster presentation at the EGU General Assembly on global wind energy assessment.</li><li><strong>2025</strong> — Received the National Scholarship for Doctoral Students.</li></ul>
+  </section>
+</div>
+</main>
+<footer class="footer"><div class="container footer-inner">
+  <div><strong>Chengzhi Hou · 侯承志</strong><p>School of Geography and Ocean Science, Nanjing University<br>163 Xianlin Avenue, Qixia District, Nanjing, Jiangsu 210023, China</p><p>Institutional email: <a href="mailto:chengzhihou@smail.nju.edu.cn">chengzhihou@smail.nju.edu.cn</a><br>Other email: <a href="mailto:houchengzhi312@163.com">houchengzhi312@163.com</a></p></div>
+  <div><strong>Academic Links</strong><div class="foot-links"><a href="https://orcid.org/0000-0002-6966-904X" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://scholar.google.com/citations?user=AGvn68sAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://www.scopus.com/authid/detail.uri?authorId=57992245100" target="_blank" rel="noopener noreferrer">Scopus</a><a href="https://github.com/Houcz727" target="_blank" rel="noopener noreferrer">GitHub</a></div><p class="last">© 2026 Chengzhi Hou · Updated October 2026</p></div>
+</div></footer>
+</body></html>
